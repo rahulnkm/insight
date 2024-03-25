@@ -4,7 +4,12 @@ import time
 if 'text_area_content' not in st.session_state:
     st.session_state.text_area_content = ''
 
-user_input = st.text_area("Write something", value=st.session_state.text_area_content, key='text_area_content')
+with st.form("my_form"):
+    user_input = st.text_area("Enter text here:", key='text_area_content')
+    submitted = st.form_submit_button("Submit")
+
+if submitted:
+    st.session_state.text_area_content = ''
 
 messages = []
 
