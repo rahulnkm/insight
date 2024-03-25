@@ -10,5 +10,14 @@ if input:
 
 display = st.button("Show messages")
 
+array_placeholder = st.empty()
+
 if display:
-    st.write(messages)
+    
+    array_placeholder.write(my_array)
+    
+    # Wait for 4 seconds
+    time.sleep(4)
+    
+    # Clear the content after 4 seconds
+    array_placeholder.empty()
