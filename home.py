@@ -15,7 +15,7 @@ if display:
     temp_message = st.empty()
     
     # Display the array contents in the placeholder
-    temp_message.write(array_contents)
+    temp_message.write(messages)
     
     # Sleep for 4 seconds, showing the contents
     time.sleep(4)
