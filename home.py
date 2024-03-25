@@ -1,4 +1,5 @@
 import streamlit as st
+import time
 
 input = st.text_area("Write something")
 
@@ -11,14 +12,7 @@ if input:
 display = st.button("Show messages")
 
 if display:
-    
     temp_message = st.empty()
-    
-    # Display the array contents in the placeholder
     temp_message.write(messages)
-    
-    # Sleep for 4 seconds, showing the contents
     time.sleep(4)
-    
-    # Clear the placeholder after 4 seconds, effectively hiding the array contents
     temp_message.empty()
