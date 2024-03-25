@@ -10,14 +10,15 @@ if input:
 
 display = st.button("Show messages")
 
-array_placeholder = st.empty()
-
 if display:
     
-    array_placeholder.write(my_array)
+    temp_message = st.empty()
     
-    # Wait for 4 seconds
+    # Display the array contents in the placeholder
+    temp_message.write(array_contents)
+    
+    # Sleep for 4 seconds, showing the contents
     time.sleep(4)
     
-    # Clear the content after 4 seconds
-    array_placeholder.empty()
+    # Clear the placeholder after 4 seconds, effectively hiding the array contents
+    temp_message.empty()
