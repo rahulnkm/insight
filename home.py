@@ -7,6 +7,7 @@ messages = []
 
 if input:
     messages.append(input)
+    input = st.empty()
 
 
 display = st.button("Show messages")
