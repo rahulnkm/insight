@@ -1,14 +1,16 @@
 import streamlit as st
 import time
 
-input = st.text_area("Write something")
+if 'text_area_content' not in st.session_state:
+    st.session_state.text_area_content = ''
+
+user_input = st.text_area("Write something", value=st.session_state.text_area_content, key='text_area_content')
 
 messages = []
 
 if input:
     messages.append(input)
-    input = st.empty()
-
+    st.session_state.text_area_content = ''
 
 display = st.button("Show messages")
 
